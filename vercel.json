@@ -1,14 +1,14 @@
 {
   "version": 2,
-  "buildCommand": "npm run vercel-build",
   "functions": {
     "api/index.js": {
+      "runtime": "@vercel/node",
       "maxDuration": 30
     }
   },
   "routes": [
     {
-      "src": "/api/(.*)",
+      "src": "/(.*)",
       "dest": "/api/index.js"
     }
   ]
