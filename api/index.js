@@ -9,13 +9,7 @@ require('dotenv').config();
 const app = express();
 
 // Prisma 7 membutuhkan adapter untuk koneksi PostgreSQL
-const adapter = new PrismaPg({
-  connectionString: process.env.DATABASE_URL,
-});
-
-const prisma = new PrismaClient({
-  adapter,
-});
+const prisma = new PrismaClient();
 const JWT_SECRET = process.env.JWT_SECRET || 'rahasia_negara';
 
 app.use(cors());
