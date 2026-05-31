@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node api/index.js",
-    "vercel-build": "npx prisma generate && echo BUILD_OK"
+    "postinstall": "prisma generate"
   },
   "keywords": [],
   "author": "",
